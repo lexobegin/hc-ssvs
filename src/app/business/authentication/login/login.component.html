@@ -1,0 +1,66 @@
+<div
+  class="bg-gray-800 absolute top-0 left-0 right-0 bottom-0 h-full w-full overflow-hidden"
+></div>
+<div
+  class="relative min-h-screen sm:flex sm:flex-row justify-center bg-transparent rounded-3xl shadow-xl"
+>
+  <div class="flex justify-center self-center z-10">
+    <div class="p-12 bg-white mx-auto rounded-3xl w-96">
+      <div class="mb-7">
+        <h3 class="font-semibold text-2xl text-gray-800">Iniciar sesion</h3>
+        <p hidden class="text-gray-400">
+          ¿No tienes una cuenta?
+          <a href="#" class="text-sm text-purple-700 hover:text-purple-700"
+            >Inscribete</a
+          >
+        </p>
+      </div>
+      <div class="space-y-6">
+        <div class="">
+          <input
+            type="text"
+            [(ngModel)]="email"
+            name="email"
+            placeholder="Ingrese su correo"
+            class="w-full text-sm px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-400"
+            style="color: #000"
+          />
+        </div>
+
+        <div class="relative" x-data="{ show: true }">
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="Ingrese su contraseña"
+            class="text-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none focus:border-blue-400"
+            style="color: #000"
+          />
+          <div
+            class="flex items-center absolute inset-y-0 right-0 mr-3 text-sm leading-5"
+          ></div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="text-sm ml-auto">
+            <a href="#" class="text-blue-700 hover:text-blue-600">
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+        </div>
+        <div>
+          <button
+            (click)="login()"
+            type="submit"
+            class="w-full flex justify-center bg-blue-700 hover:bg-blue-800 text-gray-100 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500"
+          >
+            Iniciar sesion
+          </button>
+        </div>
+      </div>
+      <div hidden class="mt-7 text-center text-gray-300 text-xs">
+        <span> Copyright © 2024 </span>
+      </div>
+    </div>
+  </div>
+</div>

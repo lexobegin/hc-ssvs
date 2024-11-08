@@ -1,0 +1,476 @@
+<aside
+  class="bg-gradient-to-br overflow-x-auto from-gray-800 to-gray-900 -translate-x-80 fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-32px)] w-72 rounded-xl transition-transform duration-300 xl:translate-x-0"
+>
+  <div class="relative border-b border-white/20">
+    <a class="flex items-center gap-4 py-6 px-8">
+      <h6
+        class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white text-lg"
+      >
+        Seguro de Salud Vida Sana “SSVS”
+      </h6>
+    </a>
+    <button
+      class="middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-8 max-w-[32px] h-8 max-h-[32px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30 absolute right-0 top-0 grid rounded-br-none rounded-tl-none xl:hidden"
+      type="button"
+    >
+      <span
+        class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="h-5 w-5 text-white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div class="m-4">
+    <ul class="mb-4 flex flex-col gap-1">
+      <li>
+        <a routerLink="/dashboard">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              class="w-5 h-5 text-inherit"
+            >
+              <path
+                d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z"
+              ></path>
+              <path
+                d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
+              ></path>
+            </svg>
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              dashboard
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li class="mx-3.5 mt-4 mb-2">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-white font-black uppercase opacity-75"
+        >
+          ADMINISTRATIVO
+        </p>
+      </li>
+
+      <li>
+        <a routerLink="/rolespermisos">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Roles y Permisos
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/usuarios">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Usuarios
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/especialidades">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Especialidades
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/medicos">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Médicos
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/horarioatencion">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Horarios
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/pacientes">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <!--<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+              />
+            </svg>-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Pacientes
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li class="mx-3.5 mt-4 mb-2">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-white font-black uppercase opacity-75"
+        >
+          ATENCION MEDICA
+        </p>
+      </li>
+
+      <li>
+        <a routerLink="/profile">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <!--<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+              />
+            </svg>-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Consulta
+              <!--Usuarios profile-->
+            </p>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/tables">
+          <button
+            routerLinkActive="bg-gradient-to-tr from-gray-600 to-gray-400 shadow-md shadow-gray-500/20 hover:shadow-lg hover:shadow-gray-500/40 active:opacity-[0.85]"
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 flex w-full items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <!--<svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+              />
+            </svg>-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Historia Clinica<!--Roles y permisos Tables-->
+            </p>
+          </button>
+        </a>
+      </li>
+
+      <li hidden>
+        <a class="" href="#">
+          <button
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              class="w-5 h-5 text-inherit"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              notifactions
+            </p>
+          </button>
+        </a>
+      </li>
+    </ul>
+    <!--<ul hidden class="mb-4 flex flex-col gap-1">
+      <li class="mx-3.5 mt-4 mb-2">
+        <p
+          class="block antialiased font-sans text-sm leading-normal text-white font-black uppercase opacity-75"
+        >
+          USUARIOS
+        </p>
+      </li>
+      <li>
+        <a class="" href="#">
+          <button
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Usuario
+            </p>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a class="" href="#">
+          <button
+            class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize"
+            type="button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+              />
+            </svg>
+
+            <p
+              class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"
+            >
+              Rol y Permiso
+            </p>
+          </button>
+        </a>
+      </li>
+    </ul>-->
+  </div>
+</aside>
