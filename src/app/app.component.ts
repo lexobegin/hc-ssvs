@@ -10,12 +10,12 @@ import { AuthService } from './core/services/auth.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+
+
+export class AppComponent implements OnInit{//Original
   title = 'hc-ssvs';
 
-  constructor( private authService: AuthService) {
-
-  }
+  constructor( private authService: AuthService) {}
 
   ngOnInit(): void {
    if(this.authService.isAuthenticated()) {
@@ -23,3 +23,4 @@ export class AppComponent implements OnInit{
    }
   }
 }
+

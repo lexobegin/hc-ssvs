@@ -83,32 +83,16 @@ export class AuthService {
    
   }
 
-
-  isAuthenticated(): boolean {//Observable<boolean> {
+  isAuthenticated(): boolean {//ORIGINAL
     
     const token = this.getToken();
     if(!token){
-      return false; //false;
+      return false;
     }
 
     const payload = JSON.parse(atob(token.split('.')[1]));
     const exp = payload.exp * 1000;
-    return Date.now() < exp; //Date.now() < exp;
-
-    /*try {
-      const token = this.getToken();
-      if (!token) {
-        return of(false);
-      }
-      
-      const payload = JSON.parse(atob(token.split('.')[1]));
-      const exp = payload.exp * 1000;
-      
-      return of(Date.now() < exp);
-    } catch (error) {
-      console.error("Error en la autenticación: ", error);
-      return of(false);
-    }*/
+    return Date.now() < exp;
 
   }
 
@@ -187,5 +171,6 @@ async getAllPacientes(token:string):Promise<any>{
     throw error;
   }
 }
+
 
 }
