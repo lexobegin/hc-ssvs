@@ -27,9 +27,15 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/rolespermisos/rolpermiso/rolpermiso.component'),
                 canActivate: [AuthGuard]
             },
+            //USUARIO
             {
                 path: 'usuarios',
                 loadComponent: () => import('./business/administrativo/usuarios/usuario/usuario.component'),
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'usuario/create',
+                loadComponent: () => import('./business/administrativo/usuarios/registerusuario/registerusuario.component'),
                 canActivate: [AuthGuard]
             },
             
@@ -64,6 +70,8 @@ export const routes: Routes = [
     {
         path: 'login',
         loadComponent: ()=> import('./business/authentication/login/login.component'),
+        //path: 'spinner',
+        //loadComponent: ()=> import('./shared/components/spinner/spinner.component'),
         canActivate: [AuthenticatedGuard]
     },
     {

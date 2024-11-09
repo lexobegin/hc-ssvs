@@ -102,7 +102,7 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
-//USUARIO
+//ROL
 async getAllRolesPermisos(token:string):Promise<any>{
   const url = `${this.BASE_URL}/admin/rol/get-all`;
   const headers = new HttpHeaders({
@@ -117,6 +117,20 @@ async getAllRolesPermisos(token:string):Promise<any>{
 }
 
 //USUARIO
+
+async register(userData:any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/user/create`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.post<any>(url, userData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
 async getAllUsersV2(token:string):Promise<any>{
     const url = `${this.BASE_URL}/admin/get-all-usersV2`;
     const headers = new HttpHeaders({
