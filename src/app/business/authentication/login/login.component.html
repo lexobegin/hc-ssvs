@@ -1,4 +1,4 @@
-<div
+<!--<div
   class="bg-gray-800 absolute top-0 left-0 right-0 bottom-0 h-full w-full overflow-hidden"
 ></div>
 <div
@@ -63,4 +63,77 @@
       </div>
     </div>
   </div>
+</div>-->
+
+<!--<div
+  class="bg-gray-800 absolute top-0 left-0 right-0 bottom-0 h-full w-full overflow-hidden"
+></div>-->
+<div
+  class="bg-gray-800 fixed top-0 left-0 right-0 bottom-0 w-full h-screen overflow-hidden"
+></div>
+
+<div
+  class="relative flex items-center justify-center w-full h-screen bg-transparent"
+>
+  <form
+    (ngSubmit)="login()"
+    #loginForm="ngForm"
+    class="relative bg-transparent rounded-3xl shadow-xl w-full sm:w-auto sm:h-auto p-6"
+  >
+    <div class="flex justify-center self-center z-10 w-full sm:w-96">
+      <div class="bg-white w-full rounded-3xl p-8">
+        <div class="mb-7">
+          <h3 class="font-semibold text-2xl text-gray-800">Iniciar sesión</h3>
+          <p *ngIf="errorMessage" class="text-red-500 text-sm">
+            {{ errorMessage }}
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <input
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              placeholder="Ingrese su correo"
+              class="w-full text-sm px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-400"
+              style="color: #000"
+              required
+              (keydown)="onEnter($event)"
+            />
+          </div>
+
+          <div class="relative">
+            <input
+              type="password"
+              [(ngModel)]="password"
+              name="password"
+              placeholder="Ingrese su contraseña"
+              class="text-sm text-gray-200 px-4 py-3 rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none focus:border-blue-400"
+              style="color: #000"
+              required
+              (keydown)="onEnter($event)"
+            />
+          </div>
+
+          <div class="flex items-center justify-between">
+            <div class="text-sm ml-auto">
+              <a href="#" class="text-blue-700 hover:text-blue-600">
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full flex justify-center bg-blue-700 hover:bg-blue-800 text-gray-100 p-3 rounded-lg tracking-wide font-semibold cursor-pointer transition ease-in duration-500"
+            >
+              Iniciar sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
