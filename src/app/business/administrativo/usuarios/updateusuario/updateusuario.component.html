@@ -1,1 +1,129 @@
-<p>updateusuario works!</p>
+<div class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+  <div class="container mx-auto p-4">
+    <div class="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
+      <h1 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+        Editar usuario
+      </h1>
+      <p
+        *ngIf="errorMessage"
+        class="alert-error text-red-500 p-4 mb-4 bg-red-100 text-base rounded-lg"
+      >
+        {{ errorMessage }}
+      </p>
+
+      <form (ngSubmit)="updateUser()">
+        <!-- Rol -->
+        <div class="mb-4 max-w-xs">
+          <label
+            for="role"
+            class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Rol:*</label
+          >
+          <select
+            id="role"
+            name="role"
+            class="border p-2 rounded w-full"
+            [(ngModel)]="userData.role"
+            required
+          >
+            <option value="">Selecciona un rol</option>
+            <option value="ADMIN">Administrador</option>
+            <option value="PACIENTE">Paciente</option>
+            <option value="MEDICO">Médico</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Nombre Completo -->
+          <div class="mb-4">
+            <label
+              for="full-name"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Nombre Completo:*</label
+            >
+            <input
+              id="full-name"
+              type="text"
+              name="full_name"
+              placeholder="Nombre completo"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="userData.nombre"
+              required
+            />
+          </div>
+
+          <!-- Dirección -->
+          <div class="mb-4">
+            <label
+              for="address"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Dirección:*</label
+            >
+            <input
+              id="address"
+              type="text"
+              name="address"
+              placeholder="Dirección"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="userData.direccion"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-4">
+            <label
+              for="email"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Email:*</label
+            >
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="userData.email"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <!--<div class="mb-4">
+            <label
+              for="password"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Password:*</label
+            >
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.password"
+              required
+            />
+          </div>-->
+        </div>
+
+        <!-- Botón de envío al lado izquierdo (click)="navigateToUpdate(usuario.id)" -->
+        <div class="mt-6 flex justify-start">
+          <button
+            type="submit"
+            class="px-8 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 focus:outline-none transition-colors mr-4"
+          >
+            Aceptar
+          </button>
+          <a
+            href="javascript:void(0)"
+            class="px-8 py-2.5 rounded bg-gray-500 text-white hover:bg-gray-600 focus:outline-none transition-colors"
+            (click)="backUpdate()"
+          >
+            Atras
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -144,6 +144,45 @@ async getAllUsersV2(token:string):Promise<any>{
     }
   }
 
+  async getUsersById(userId: string, token:string):Promise<any>{
+    const url = `${this.BASE_URL}/admin/user/${userId}`;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    })
+    try{
+      const response =  this.httpClient.get<any>(url, {headers}).toPromise()
+      return response;
+    }catch(error){
+      throw error;
+    }
+  }
+
+  async updateUSer(userId: string, userData: any, token:string):Promise<any>{
+    const url = `${this.BASE_URL}/admin/user/${userId}`;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    })
+    try{
+      const response =  this.httpClient.put<any>(url, userData, {headers}).toPromise()
+      return response;
+    }catch(error){
+      throw error;
+    }
+  }
+
+  async deleteUser(userId: string, token:string):Promise<any>{
+    const url = `${this.BASE_URL}/admin/user/${userId}`;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    })
+    try{
+      const response =  this.httpClient.delete<any>(url, {headers}).toPromise()
+      return response;
+    }catch(error){
+      throw error;
+    }
+  }
+
 //ESPECIALIDADES
 async getAllEspecialidades(token:string):Promise<any>{
   const url = `${this.BASE_URL}/admin/especialidad/get-all`;

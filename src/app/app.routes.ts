@@ -22,6 +22,7 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/table/table.component'),
                 canActivate: [AuthGuard]
             },
+            //ROLES Y PERMISOS
             {
                 path: 'rolespermisos',
                 loadComponent: () => import('./business/administrativo/rolespermisos/rolpermiso/rolpermiso.component'),
@@ -38,22 +39,30 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/usuarios/registerusuario/registerusuario.component'),
                 canActivate: [AuthGuard]
             },
-            
+            {
+                path: 'usuario/update/:id',
+                loadComponent: () => import('./business/administrativo/usuarios/updateusuario/updateusuario.component'),
+                canActivate: [AuthGuard]
+            },
+            //MEDICOS
             {
                 path: 'medicos',
                 loadComponent: () => import('./business/administrativo/medicos/medico/medico.component'),
                 canActivate: [AuthGuard]
-            }, 
+            },
+            //ESPECIALIDADES
             {
                 path: 'especialidades',
                 loadComponent: () => import('./business/administrativo/especialidadesmedicas/especialidad/especialidad.component'),
                 canActivate: [AuthGuard]
             },
+            //HORARIO ATENCION
             {
                 path: 'horarioatencion',
                 loadComponent: () => import('./business/administrativo/horarioatencion/horario/horario.component'),
                 canActivate: [AuthGuard]
             },
+            //PACIENTES
             {
                 path: 'pacientes',
                 loadComponent: () => import('./business/administrativo/pacientes/paciente/paciente.component'),

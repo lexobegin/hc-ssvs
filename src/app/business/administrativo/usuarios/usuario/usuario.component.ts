@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export default class UsuarioComponent {
 
   usuarios: any[] = [];
+  errorMessage: string = '';
 
   constructor(
     private readonly userService: AuthService,
@@ -35,6 +36,31 @@ export default class UsuarioComponent {
     } catch (error: any) {
       //this.showError(error.message);
     }
+  }
+
+  navigateToUpdate(userId: string) {
+    this.router.navigate(['/usuario/update', userId]);
+  }
+
+  async deleteUser(userId: string) {
+    const confirmDelete = confirm('Estás seguro de que deseas eliminar este usuario?');
+    if (confirmDelete) {
+      try {
+        const token: any = localStorage.getItem('authToken');//token
+        await this.userService.deleteUser(userId, token);
+        // Refresh the user list after deletion
+        this.loadUsuarios();
+      } catch (error: any) {
+        this.showError(error.message);
+      }
+    }
+  }
+
+  showError(message: string) {
+    this.errorMessage = message;
+    setTimeout(() => {
+      this.errorMessage = ''; // Clear the error message after the specified duration
+    }, 3000);
   }
 
 }
