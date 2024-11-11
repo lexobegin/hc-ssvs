@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export default class RolpermisoComponent {
 
   roles: any[] = [];
+  errorMessage: string = ''
 
   constructor(
     private readonly userService: AuthService,
@@ -27,14 +28,40 @@ export default class RolpermisoComponent {
     try {
       const token: any = localStorage.getItem('authToken');//token
       const response = await this.userService.getAllRolesPermisos(token);
+      console.log(response);
       if (response) {
         this.roles = response;
       } else {
-        //this.showError('No users found.');
+        this.showError('No users found.');
       }
     } catch (error: any) {
-      //this.showError(error.message);
+      this.showError(error.message);
     }
+  }
+
+  navigateToUpdate(rolId: string) {
+    this.router.navigate(['/rolespermisos/update', rolId]);
+  }
+
+  async deleteRol(rolID: string) {
+    const confirmDelete = confirm('¿Estás seguro que desea eliminar este Rol?');
+    if (confirmDelete) {
+      try {
+        const token: any = localStorage.getItem('authToken');//token
+        await this.userService.deleteRol(rolID, token);
+        // Refresh the user list after deletion
+        this.loadRoles();
+      } catch (error: any) {
+        this.showError(error.message);
+      }
+    }
+  }
+
+  showError(message: string) {
+    this.errorMessage = message;
+    setTimeout(() => {
+      this.errorMessage = ''; // Clear the error message after the specified duration
+    }, 3000);
   }
 
 }

@@ -116,6 +116,72 @@ async getAllRolesPermisos(token:string):Promise<any>{
   }
 }
 
+async getRolById(rolID: string, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/get-rol/${rolID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.get<any>(url, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async registerRol(rolData:any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/rol/create`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.post<any>(url, rolData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async updateRol(rolID: string, rolData: any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/update-rol/${rolID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.put<any>(url, rolData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async deleteRol(rolID: string, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/delete-rol/${rolID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.delete<any>(url, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+//PERMISOS
+async getAllPermisos(token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/get-all-permisos`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.get<any>(url, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
 //USUARIO
 
 async register(userData:any, token:string):Promise<any>{
