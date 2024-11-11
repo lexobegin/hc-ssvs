@@ -28,6 +28,16 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/rolespermisos/rolpermiso/rolpermiso.component'),
                 canActivate: [AuthGuard]
             },
+            {
+                path: 'rolespermisos/create',
+                loadComponent: () => import('./business/administrativo/rolespermisos/registerrolpermiso/registerrolpermiso.component'),
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'rolespermisos/update/:id',
+                loadComponent: () => import('./business/administrativo/rolespermisos/updaterolpermiso/updaterolpermiso.component'),
+                canActivate: [AuthGuard]
+            },
             //USUARIO
             {
                 path: 'usuarios',
