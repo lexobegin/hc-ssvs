@@ -50,6 +50,16 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/medicos/medico/medico.component'),
                 canActivate: [AuthGuard]
             },
+            {
+                path: 'medico/create',
+                loadComponent: () => import('./business/administrativo/medicos/registermedico/registermedico.component'),
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'medico/update/:id',
+                loadComponent: () => import('./business/administrativo/medicos/updatemedico/updatemedico.component'),
+                canActivate: [AuthGuard]
+            },
             //ESPECIALIDADES
             {
                 path: 'especialidades',
