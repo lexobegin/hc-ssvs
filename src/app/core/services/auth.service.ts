@@ -199,7 +199,7 @@ async getAllEspecialidades(token:string):Promise<any>{
 
 //MEDICO
 async getAllMedicos(token:string):Promise<any>{
-  const url = `${this.BASE_URL}/admin/get-all-medico`;
+  const url = `${this.BASE_URL}/admin/medico/get-all-medico`;
   const headers = new HttpHeaders({
     'Authorization': `Bearer ${token}`
   })
@@ -210,6 +210,32 @@ async getAllMedicos(token:string):Promise<any>{
     throw error;
   }
 }  
+
+async createMedico(medicoData:any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/medico/createm`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.post<any>(url, medicoData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async updateMedicoE(medicoID: string, medicoeData: any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/medico/update-medicoe/${medicoID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.put<any>(url, medicoeData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
 
 //PACIENTE
 async getAllPacientes(token:string):Promise<any>{

@@ -1,1 +1,320 @@
-<p>registermedico works!</p>
+<div class="bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+  <div class="container mx-auto p-4">
+    <div class="bg-white dark:bg-gray-700 shadow rounded-lg p-6">
+      <h1 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+        Crear medico
+      </h1>
+      <p
+        *ngIf="errorMessage"
+        class="alert-error text-red-500 p-4 mb-4 bg-red-100 text-base rounded-lg"
+      >
+        {{ errorMessage }}
+      </p>
+
+      <form (submit)="handleSubmit()">
+        <!-- Rol -->
+        <!--<div class="mb-4 max-w-xs">
+            <label
+              for="role"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Rol:*</label
+            >
+            <select
+              id="role"
+              name="role"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.role"
+              required
+            >
+              <option value="">Selecciona un rol</option>
+              <option value="ADMIN">Administrador</option>
+              <option value="PACIENTE">Paciente</option>
+              <option value="MEDICO">Médico</option>
+            </select>
+          </div>-->
+
+        <!-- Especialidades -->
+        <!--<div class="mb-4 max-w-xs">
+          <label
+            for="especialidades"
+            class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Especialidades*</label
+          >
+          <select
+            id="especialidades"
+            name="especialidad_id"
+            class="border p-2 rounded w-full"
+            [(ngModel)]="formData.especialidades"
+            required
+          >
+            <option value="" disabled selected>
+              Selecciona un especialidades
+            </option>
+            <option
+              *ngFor="let especialidad of especialidades"
+              [value]="especialidad.id"
+            >
+              {{ especialidad.nombre }}
+            </option>
+          </select>
+        </div>-->
+
+        <!--<div class="mb-4">
+          <label
+            for="especialidades"
+            class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Especialidades*</label
+          >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              *ngFor="let especialidad of especialidades"
+              class="flex items-center space-x-2"
+            >
+              <input
+                type="checkbox"
+                id="{{ 'especialidad_' + especialidad.id }}"
+                name="especialidad_id"
+                [value]="especialidad.id"
+                [(ngModel)]="formData.especialidades"
+                class="border p-2 rounded"
+              />
+              <label
+                for="{{ 'especialidad_' + especialidad.id }}"
+                class="text-sm text-gray-700 dark:text-gray-300"
+              >
+                {{ especialidad.nombre }}
+              </label>
+            </div>
+          </div>
+        </div>-->
+
+        <!--<div class="mb-4 p-4 bg-gray-100 rounded-lg">
+          <label
+            for="especialidades"
+            class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Especialidades*</label
+          >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              *ngFor="let especialidad of especialidades"
+              class="flex items-center space-x-2"
+            >
+              <input
+                type="checkbox"
+                id="{{ 'especialidad_' + especialidad.id }}"
+                name="especialidad_id"
+                [value]="especialidad.id"
+                [(ngModel)]="formData.especialidades"
+                class="border p-2 rounded"
+              />
+              <label
+                for="{{ 'especialidad_' + especialidad.id }}"
+                class="text-sm text-gray-700 dark:text-gray-300"
+              >
+                {{ especialidad.nombre }}
+              </label>
+            </div>
+          </div>
+        </div>-->
+
+        <!--<div class="mb-4 p-4 bg-gray-100 rounded-lg">
+          <label
+            for="especialidades"
+            class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300"
+            >Especialidades*</label
+          >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              *ngFor="let especialidad of especialidades"
+              class="flex items-center space-x-2"
+            >
+              <input
+                type="checkbox"
+                id="{{ 'especialidad_' + especialidad.id }}"
+                name="especialidad_id"
+                [value]="especialidad.id"
+                [(ngModel)]="formData.especialidades"
+                class="border p-2 rounded"
+              />
+              <label
+                for="{{ 'especialidad_' + especialidad.id }}"
+                class="text-sm text-gray-700 dark:text-gray-300"
+              >
+                {{ especialidad.nombre }}
+              </label>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Nombre Completo -->
+          <div class="mb-4">
+            <label
+              for="nombre-completo"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Nombre Completo:*</label
+            >
+            <input
+              id="nombre-completo"
+              type="text"
+              name="nombre-completo"
+              placeholder="Nombre completo"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.nombre"
+              required
+            />
+          </div>
+
+          <!-- Dirección -->
+          <div class="mb-4">
+            <label
+              for="direccion"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Dirección:*</label
+            >
+            <input
+              id="direccion"
+              type="text"
+              name="direccion"
+              placeholder="Dirección"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.direccion"
+              required
+            />
+          </div>
+
+          <!-- Telefono -->
+          <div class="mb-4">
+            <label
+              for="telefono"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Telefono:*</label
+            >
+            <input
+              id="telefono"
+              type="text"
+              name="telefono"
+              placeholder="Telefono"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.telefono"
+              required
+            />
+          </div>
+
+          <!-- Edad -->
+          <div class="mb-4">
+            <label
+              for="edad"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Edad:*</label
+            >
+            <input
+              id="edad"
+              type="text"
+              name="edad"
+              placeholder="Edad"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.edad"
+              required
+            />
+          </div>
+
+          <!-- Nro. Licencia -->
+          <div class="mb-4">
+            <label
+              for="nroLicencia"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Nro. Licencia:*</label
+            >
+            <input
+              id="nroLicencia"
+              type="text"
+              name="nroLicencia"
+              placeholder="Nro. Licencia"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.nroLicencia"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-4">
+            <label
+              for="email"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Email:*</label
+            >
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.email"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mb-4">
+            <label
+              for="password"
+              class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Password:*</label
+            >
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              class="border p-2 rounded w-full"
+              [(ngModel)]="formData.password"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-4 p-4 bg-gray-100 rounded-lg">
+          <label
+            for="especialidades"
+            class="mb-4 text-lg font-semibold text-gray-700 dark:text-gray-300"
+            >Especialidades*</label
+          >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              *ngFor="let especialidad of especialidades"
+              class="flex items-center space-x-2"
+            >
+              <input
+                type="checkbox"
+                id="{{ 'especialidad_' + especialidad.id }}"
+                name="especialidad_id"
+                [checked]="especialidad.seleccionado"
+                (change)="
+                  especialidad.seleccionado = !especialidad.seleccionado
+                "
+                class="border p-2 rounded"
+              />
+              <label
+                for="{{ 'especialidad_' + especialidad.id }}"
+                class="text-sm text-gray-700 dark:text-gray-300"
+              >
+                {{ especialidad.nombre }}
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de envío al lado izquierdo -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="px-8 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 focus:outline-none transition-colors"
+          >
+            Crear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

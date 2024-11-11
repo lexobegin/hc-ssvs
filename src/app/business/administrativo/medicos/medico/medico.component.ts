@@ -37,4 +37,8 @@ export default class MedicoComponent {
     }
   }
 
+  navigateToUpdate(userId: string) {
+    this.router.navigate(['/medico/update', userId]);
+  }
+
 }

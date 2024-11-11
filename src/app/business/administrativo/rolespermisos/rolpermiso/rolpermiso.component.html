@@ -36,37 +36,13 @@
       <table class="w-full mt-4 text-left table-auto min-w-max">
         <thead>
           <tr>
-            <!--<th
-              class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100"
-            >
-              <p
-                class="flex items-center justify-between gap-2 font-sans text-sm font-normal leading-none text-slate-500"
-              >
-                ID
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  class="w-4 h-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
-                  ></path>
-                </svg>
-              </p>
-            </th>-->
             <th
               class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100"
             >
               <p
                 class="flex items-center justify-between gap-2 font-sans text-sm font-normal leading-none text-slate-500"
               >
-                Rol
+                Rol y Permisos
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -85,7 +61,7 @@
               </p>
             </th>
 
-            <th
+            <!--<th
               class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100"
             >
               <p
@@ -108,7 +84,7 @@
                   ></path>
                 </svg>
               </p>
-            </th>
+            </th>-->
 
             <th
               class="p-4 transition-colors cursor-pointer border-y border-slate-200 bg-slate-50 hover:bg-slate-100"
@@ -123,56 +99,30 @@
         </thead>
         <tbody>
           <tr *ngFor="let rol of roles" key="paciente.id">
-            <!--<td class="p-4 border-b border-slate-200">
-              <p class="text-sm font-semibold text-slate-700">
-                {{ rol.id }}
-              </p>
-            </td>-->
-            <!--
-              <td class="p-4 border-b border-slate-200">
-                <div class="flex items-center gap-3">-->
-            <!--<img
-                      src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg"
-                      alt="John Michael"
-                      class="relative inline-block h-9 w-9 !rounded-full object-cover object-center"
-                    />-->
-            <!--<div class="flex flex-col">
-                    <p class="text-sm font-semibold text-slate-700">
-                      {{ medico.nombre }}
-                    </p>
-                    <p class="text-sm text-slate-500">
-                      {{ medico.email }}
-                    </p>
-                    <p class="text-sm text-slate-500">
-                      {{ medico.direccion }}
-                    </p>
-                    <p class="text-sm text-slate-500">
-                      {{ medico.telefono }}
-                    </p>
-                    <p class="text-sm text-slate-500">
-                      {{ medico.edad }}
-                    </p>
-                  </div>
-                </div>
-              </td>-->
-
-            <!--<td class="p-4 border-b border-slate-200">
-                <p
-                  *ngFor="let especialidad of medico.especialidades"
-                  key="especialidad.id"
-                  class="text-sm font-semibold text-slate-700"
-                >
-                  {{ especialidad.nombre }}
+            <td class="p-4 border-b border-slate-200">
+              <div class="space-y-2">
+                <p class="text-sm font-semibold text-slate-700">
+                  <span class="font-bold">{{ rol.nombre }}</span>
                 </p>
-              </td>
-            -->
-            <td class="p-4 border-b border-slate-200">
-              <p class="text-sm font-semibold text-slate-700">
-                {{ rol.nombre }}
-              </p>
+                <!--<p class="text-sm font-semibold text-slate-700">
+                  <span class="font-bold">PERMISOS:</span>
+                </p>-->
+                <div class="grid grid-cols-3 gap-2">
+                  <p
+                    *ngFor="let permiso of rol.permissions"
+                    key="permiso.id"
+                    class="text-sm text-slate-700"
+                  >
+                    {{ permiso.nombre }}
+                  </p>
+                </div>
+              </div>
             </td>
-
-            <td class="p-4 border-b border-slate-200">
+            <!--<td class="p-4 border-b border-slate-200">
+              <p class="text-sm font-semibold text-slate-700">
+                ROL: {{ rol.nombre }}
+              </p>
+              <p>PERMISOS:</p>
               <p
                 *ngFor="let permiso of rol.permissions"
                 key="permiso.id"
@@ -180,37 +130,20 @@
               >
                 {{ permiso.nombre }}
               </p>
-            </td>
+            </td>-->
+
+            <!--<td class="p-4 border-b border-slate-200">
+              <p
+                *ngFor="let permiso of rol.permissions"
+                key="permiso.id"
+                class="text-sm font-semibold text-slate-700"
+              >
+                {{ permiso.nombre }}
+              </p>
+            </td>-->
 
             <td class="p-4 border-b border-slate-200">
-              <button
-                class="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-slate-900 transition-all bg-white hover:bg-slate-900/10 active:bg-slate-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button"
-              >
-                <span
-                  class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                  </svg>
-                </span>
-              </button>
+              <!--Editar-->
               <button
                 class="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-slate-900 transition-all bg-white hover:bg-slate-900/10 active:bg-slate-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
@@ -234,6 +167,7 @@
                   </svg>
                 </span>
               </button>
+              <!--Eliminar-->
               <button
                 class="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-slate-900 transition-all bg-white hover:bg-slate-900/10 active:bg-slate-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
