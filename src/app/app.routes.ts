@@ -97,7 +97,46 @@ export const routes: Routes = [
                 path: 'pacientes',
                 loadComponent: () => import('./business/administrativo/pacientes/paciente/paciente.component'),
                 canActivate: [AuthGuard]
-            },            
+            },
+            /*CONSULTA MEDICA*/
+            //CONSULTAS
+            {
+                path: 'consulta',
+                loadComponent: () => import('./business/consultamedica/consultas/consulta/consulta.component'),
+                canActivate: [AuthGuard]
+            },
+            //HISTORIAS CLINICAS
+            {
+                path: 'historiaclinica',
+                loadComponent: () => import('./business/consultamedica/historiasclinicas/historiaclinica/historiaclinica.component'),
+                canActivate: [AuthGuard]
+            },
+            /*FICHA*/
+            //SACAR FICHA (obtencion de ficha)
+            {
+                path: 'sacarficha',
+                loadComponent: () => import('./business/ficha/sacarfichas/sacarficha/sacarficha.component'),
+                canActivate: [AuthGuard]
+            },
+            //HISTORIAL DE CONSULTAS
+            {
+                path: 'historialconsulta',
+                loadComponent: () => import('./business/ficha/historialconsultas/historialconsulta/historialconsulta.component'),
+                canActivate: [AuthGuard]
+            },
+            //NOTIFICACION Y RECORDATORIOS
+            {
+                path: 'notificacion',
+                loadComponent: () => import('./business/ficha/notificaciones/notificacion/notificacion.component'),
+                canActivate: [AuthGuard]
+            },
+            //NOTIFICACION Y RECORDATORIOS
+            {
+                path: 'medicodisponible',
+                loadComponent: () => import('./business/ficha/medicosdisponibles/medicodisponible/medicodisponible.component'),
+                canActivate: [AuthGuard]
+            },
+
             {
                 path: '',
                 redirectTo: 'dashboard',
