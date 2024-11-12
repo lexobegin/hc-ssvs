@@ -23,7 +23,8 @@ export default class LoginComponent {
   login(): void {
 
     if (!this.email || !this.password) {
-      this.errorMessage = 'Por favor ingresa tu correo y contraseña.';
+      //this.errorMessage = 'Por favor ingresa tu correo y contraseña.';
+      this.showError('Por favor ingresa tu correo y contraseña.');
       return;
     }
 
@@ -61,7 +62,8 @@ export default class LoginComponent {
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
-        this.errorMessage = 'Error de login. Verifica tus credenciales.';
+        //this.errorMessage = 'Error de login. Verifica tus credenciales.';
+        this.showError('Error de login. Verifica tus credenciales.');
         console.error('Login failed', err);
       }
     });
@@ -73,6 +75,13 @@ export default class LoginComponent {
     if (event.key === 'Enter') {
       this.login();
     }
+  }
+
+  showError(message: string) {
+    this.errorMessage = message;
+    setTimeout(() => {
+      this.errorMessage = ''; // Clear the error message after the specified duration
+    }, 3000);
   }
 
 }

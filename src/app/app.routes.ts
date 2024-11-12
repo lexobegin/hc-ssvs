@@ -76,6 +76,16 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/especialidadesmedicas/especialidad/especialidad.component'),
                 canActivate: [AuthGuard]
             },
+            {
+                path: 'especialidades/create',
+                loadComponent: () => import('./business/administrativo/especialidadesmedicas/registerespecialidad/registerespecialidad.component'),
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'especialidades/update/:id',
+                loadComponent: () => import('./business/administrativo/especialidadesmedicas/updateespecialidad/updateespecialidad.component'),
+                canActivate: [AuthGuard]
+            },
             //HORARIO ATENCION
             {
                 path: 'horarioatencion',
