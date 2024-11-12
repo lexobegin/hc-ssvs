@@ -261,7 +261,59 @@ async getAllEspecialidades(token:string):Promise<any>{
   }catch(error){
     throw error;
   }
-}  
+}
+
+async createEspecialidad(especialidadData: any, token: string): Promise<any> {
+  const url = `${this.BASE_URL}/admin/especialidad/create`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  });
+  try {
+    const response = await this.httpClient.post<any>(url, especialidadData, { headers }).toPromise();
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async getEspecialidadById(especialidadID: string, token: string): Promise<any> {
+  const url = `${this.BASE_URL}/admin/especialidad/get/${especialidadID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  });
+  try {
+    const response = await this.httpClient.get<any>(url, { headers }).toPromise();
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async updateEspecialidad(especialidadID: string, cespecialidadData: any, token: string): Promise<any> {
+  const url = `${this.BASE_URL}/admin/especialidad/update/${especialidadID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  });
+  try {
+    const response = await this.httpClient.put<any>(url, cespecialidadData, { headers }).toPromise();
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async deleteEspecialidad(especialidadID: string, token: string): Promise<any> {
+  const url = `${this.BASE_URL}/admin/especialidad/delete/${especialidadID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  });
+  try {
+    const response = await this.httpClient.delete<any>(url, { headers }).toPromise();
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
 
 //MEDICO
 async getAllMedicos(token:string):Promise<any>{

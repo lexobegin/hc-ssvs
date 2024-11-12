@@ -84,7 +84,13 @@
       <div class="bg-white w-full rounded-3xl p-8">
         <div class="mb-7">
           <h3 class="font-semibold text-2xl text-gray-800">Iniciar sesión</h3>
-          <p *ngIf="errorMessage" class="text-red-500 text-sm">
+          <!--<p *ngIf="errorMessage" class="text-red-500 text-sm">
+            {{ errorMessage }}
+          </p>-->
+          <p
+            *ngIf="errorMessage"
+            class="alert-error text-red-500 p-4 mb-4 bg-red-100 text-base rounded-lg"
+          >
             {{ errorMessage }}
           </p>
         </div>
