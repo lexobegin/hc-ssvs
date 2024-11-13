@@ -31,7 +31,7 @@ export class AuthService {
 
   private setToken(token: string): void {
     localStorage.setItem(this.tokenKey, token);
-  } 
+  }
 
   private getToken(): string | null {
     if(typeof window !== 'undefined'){
@@ -43,7 +43,7 @@ export class AuthService {
 
   private setRefreshToken(token: string): void {
     localStorage.setItem(this.refreshTokenKey, token);
-  } 
+  }
 
   private getRefreshToken(): string | null {
     if(typeof window !== 'undefined'){
@@ -80,11 +80,11 @@ export class AuthService {
     setTimeout(() => {
       this.refreshToken().subscribe()
     }, timeout);
-   
+
   }
 
   isAuthenticated(): boolean {//ORIGINAL
-    
+
     const token = this.getToken();
     if(!token){
       return false;
@@ -327,7 +327,7 @@ async getAllMedicos(token:string):Promise<any>{
   }catch(error){
     throw error;
   }
-}  
+}
 
 async createMedico(medicoData:any, token:string):Promise<any>{
   const url = `${this.BASE_URL}/admin/medico/createm`;
@@ -369,5 +369,43 @@ async getAllPacientes(token:string):Promise<any>{
   }
 }
 
+async createPaciente(pacienteData:any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/paciente/create`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.post<any>(url, pacienteData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async updatePaciente(pacienteID: string, pacienteData: any, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/paciente/${pacienteID}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.put<any>(url, pacienteData, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
+
+async deletePaciente(pacienteId: string, token:string):Promise<any>{
+  const url = `${this.BASE_URL}/admin/paciente/${pacienteId}`;
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  try{
+    const response =  this.httpClient.delete<any>(url, {headers}).toPromise()
+    return response;
+  }catch(error){
+    throw error;
+  }
+}
 
 }

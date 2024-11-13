@@ -98,6 +98,17 @@ export const routes: Routes = [
                 loadComponent: () => import('./business/administrativo/pacientes/paciente/paciente.component'),
                 canActivate: [AuthGuard]
             },
+            {
+                path: 'paciente/create',
+                loadComponent: () => import('./business/administrativo/pacientes/registerpaciente/registerpaciente.component'),
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'paciente/update/:id',
+                loadComponent: () => import('./business/administrativo/pacientes/updatepaciente/updatepaciente.component'),
+                canActivate: [AuthGuard]
+            },
+
             /*CONSULTA MEDICA*/
             //CONSULTAS
             {
